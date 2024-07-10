@@ -31,8 +31,7 @@ while IFS= read -r file; do
 done < files-to-move.txt
 
 # Clean up
-mkdir -p "$DEST_DIR/mvfiles/"
-mv files-to-move.txt "$DEST_DIR/mvfiles/"
+rm files-to-move.txt
 
 # Print colored success messages
 echo -e "${GREEN}All modified and untracked files have been moved to $DEST_DIR${NC}"
